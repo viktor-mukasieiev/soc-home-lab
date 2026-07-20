@@ -42,13 +42,14 @@ MikroTik Chateau LTE6 ax (RouterOS 7.19.6)
 | Component | Role | Status |
 |-----------|------|--------|
 | MikroTik Chateau LTE6 ax | Router, VLAN segmentation, VPN routing | ✅ Done |
-| Ubuntu 22.04 (Host) | Splunk Free SIEM | 🔧 In Progress |
-| Windows 11 (VM) | Log source — Sysmon | 🔧 In Progress |
-| Kali Linux (VM) | Attack simulation | 🔧 In Progress |
-| Splunk Free | SIEM — log ingestion, detection, dashboards | 🔧 In Progress |
-| Sysmon | Endpoint telemetry on Windows VM | 🔧 In Progress |
+| Ubuntu 22.04 (Host) | Splunk Enterprise 10.4.0 SIEM host | ✅ Done |
+| Windows 11 (VM) | Log source — Sysmon v15.21 | ✅ Done |
+| Kali Linux (VM) | Attack simulation platform | ✅ Done |
 | WireGuard (VPS) | Encrypted tunnel for SOC VLAN | ✅ Done |
 | Mullvad VPN | Encrypted tunnel for AI + HOME VLANs | ✅ Done |
+| Splunk Enterprise 10.4.0 | SIEM — 23,067 events indexed | ✅ Done |
+| Sysmon v15.21 | Endpoint telemetry on Windows VM | ✅ Done |
+| Splunk Universal Forwarder | Log shipping Windows → Splunk | ✅ Done |
 
 ---
 
@@ -79,20 +80,21 @@ soc-home-lab/
 - [x] WireGuard VPN tunnel (SOC VLAN → VPS)
 - [x] Mullvad VPN (AI + HOME VLANs)
 - [x] Network isolation via firewall rules
-- [ ] VM network isolation (Internal Network + Host-Only)
+- [x] VM network isolation (Internal Network + Host-Only)
 
-### 🔧 Phase 2 — SIEM Pipeline
-- [ ] Splunk Free installed on Ubuntu
-- [ ] Sysmon installed on Windows 11 VM (SwiftOnSecurity config)
-- [ ] Splunk Universal Forwarder configured
-- [ ] First logs flowing end-to-end
+### ✅ Phase 2 — SIEM Pipeline
+- [x] Splunk Enterprise 10.4.0 installed on Ubuntu
+- [x] Sysmon v15.21 installed on Windows 11 (SwiftOnSecurity config)
+- [x] Splunk Universal Forwarder configured
+- [x] 23,067 events flowing end-to-end
 
-### 📋 Phase 3 — Detection Engineering
-- [ ] First detection: Kali nmap scan → Splunk alert
-- [ ] MITRE ATT&CK mapping for each scenario
+### ✅ Phase 3 — Detection Engineering
+- [x] First detection: SMB enumeration from Kali → Splunk alert
+- [x] MITRE ATT&CK T1021.002 mapped
 - [ ] Custom Splunk dashboards
+- [ ] Automated alerts
 
-### 📢 Phase 4 — Portfolio & Visibility
+### 📋 Phase 4 — Portfolio & Visibility
 - [ ] 10+ documented lab scenarios on GitHub
 - [ ] LinkedIn profile updated with lab
 - [ ] SOC Analyst job applications
