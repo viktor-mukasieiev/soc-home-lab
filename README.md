@@ -99,6 +99,43 @@ soc-home-lab/
 - [ ] LinkedIn profile updated with lab
 - [ ] SOC Analyst job applications
 
+### ✅ Phase 5 — Splunk Universal Forwarder
+- [x] Universal Forwarder installed on Windows 11
+- [x] outputs.conf configured → 192.168.56.1:9997
+- [x] inputs.conf configured (Sysmon, Security, System logs)
+- [x] SplunkForwarder running as LocalSystem
+- [x] 23,067 events indexed in Splunk
+
+### ✅ Phase 6 — First Detection
+- [x] SMB enumeration from Kali → EventCode 4625
+- [x] KALI-ATTACKER identified in Splunk
+- [x] MITRE ATT&CK T1021.002 mapped
+
+### ✅ Phase 7 — Automated Detection
+- [x] Splunk brute force alert built
+- [x] Alert auto-triggering every minute (cron: * * * * *)
+- [x] condition=1 confirmed in scheduler.log
+- [x] MITRE ATT&CK T1110 mapped
+
+### ✅ Phase 8 — Attack Simulations
+- [x] Nmap aggressive scan → Sysmon EventCode 3 (T1046)
+- [x] RDP brute force → 23 × EventCode 4625 (T1110)
+- [x] Metasploit MS17-010 → EventCode 5379 (T1555)
+- [x] Full kill chain detected in Splunk
+- [x] 4 MITRE ATT&CK techniques mapped
+
+### ⏳ Phase 9 — Active Directory Lab
+- [ ] Windows Server 2022 installation
+- [ ] Active Directory Domain Services
+- [ ] Domain: soc.local
+- [ ] Windows 11 joined to domain
+- [ ] AD attack simulations
+
+### ⏳ Phase 10 — Portfolio & Career
+- [ ] CV finalized and published
+- [ ] LinkedIn profile updated
+- [ ] SOC Analyst job applications submitted
+
 ---
 
 ## 🔐 Security Note
